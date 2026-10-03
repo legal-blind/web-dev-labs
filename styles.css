@@ -7,6 +7,7 @@ body {
 
 h1 {
   color: #0f9488;
+  font-size: 1.5rem;
 }
 
 * {
@@ -29,6 +30,10 @@ header h1 {
 
 #main-nav {
   background-color: #0d3b36;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
 }
 
 #main-nav a {
@@ -40,12 +45,6 @@ header h1 {
 
 #main-nav a:hover {
   background-color: #14b8a6;
-}
-
-#main-nav {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
 }
 
 table {
@@ -86,19 +85,7 @@ input, textarea, select {
   z-index: 5;
 }
 
-@media (max-width: 600px) {
-  #main-nav {
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  table,
-  form {
-    width: 100%;
-  }
+table,
+form {
+  width: 100%;
 }
