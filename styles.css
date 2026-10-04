@@ -1,7 +1,3 @@
-/* Dereck Gray — Lab 6 */
-
-/* Tablet: 800px */
-
 body {
   font-family: Arial, sans-serif;
   color: #222;
@@ -85,9 +81,4 @@ input, textarea, select {
   padding: 2px 8px;
   border-radius: 4px;
   z-index: 5;
-}
-
-table,
-form {
-  width: 100%;
 }
