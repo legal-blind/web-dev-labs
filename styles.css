@@ -29,9 +29,6 @@ header h1 {
 
 #main-nav {
   background-color: #0d3b36;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
 }
 
 #main-nav a {
@@ -43,6 +40,12 @@ header h1 {
 
 #main-nav a:hover {
   background-color: #14b8a6;
+}
+
+#main-nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 
 table {
@@ -81,4 +84,26 @@ input, textarea, select {
   padding: 2px 8px;
   border-radius: 4px;
   z-index: 5;
+}
+
+@media (max-width: 600px) {
+  #main-nav {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  table,
+  form {
+    width: 100%;
+  }
+}
+
+body.dark {
+  background-color: #111827;
+  color: #f1f5f9;
 }
