@@ -9,6 +9,8 @@ const likeCount = document.querySelector("#like-count");
 const likeMessage = document.querySelector("#like-message");
 const themeBtn = document.querySelector("#theme-btn");
 const goalsList = document.querySelector("#goals-list");
+const factBtn = document.querySelector("#fact-btn");
+const factDisplay = document.querySelector("#fact-display");
 
 const goals = ["HTML", "CSS", "JavaScript"];
 
@@ -62,3 +64,33 @@ if (themeBtn) {
 } else {
   console.warn("theme-btn not found on this page");
 }
+
+async function loadFact() {
+  if (!factDisplay) {
+    console.warn("fact-display not found on this page");
+    return;
+  }
+
+  factDisplay.textContent = "Loading...";
+
+  try {
+    const response = await fetch("https://catfact.ninja/fact");
+
+    if (!response.ok) {
+      throw new Error("Server responded with an error");
+    }
+
+    const data = await response.json();
+    factDisplay.textContent = data.fact;
+  } catch (error) {
+    factDisplay.textContent = "Couldn't load a fact right now. Try again.";
+    console.error(error);
+  }
+}
+
+if (factBtn) {
+  factBtn.addEventListener("click", loadFact);
+} else {
+  console.warn("fact-btn not found on this page");
+}
+```
