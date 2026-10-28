@@ -1,3 +1,4 @@
+
 const name = "Ada";
 let labsCompleted = 6;
 let isEnrolled = false;
@@ -20,8 +21,6 @@ if (goalsList) {
     item.textContent = goal;
     goalsList.appendChild(item);
   });
-} else {
-  console.warn("goals-list not found on this page");
 }
 
 const LikeCounter = {
@@ -53,21 +52,16 @@ if (likeBtn) {
   likeBtn.addEventListener("click", function() {
     LikeCounter.increment();
   });
-} else {
-  console.warn("like-btn not found on this page");
 }
 
 if (themeBtn) {
   themeBtn.addEventListener("click", function() {
     document.body.classList.toggle("dark");
   });
-} else {
-  console.warn("theme-btn not found on this page");
 }
 
 async function loadFact() {
   if (!factDisplay) {
-    console.warn("fact-display not found on this page");
     return;
   }
 
@@ -90,7 +84,4 @@ async function loadFact() {
 
 if (factBtn) {
   factBtn.addEventListener("click", loadFact);
-} else {
-  console.warn("fact-btn not found on this page");
 }
-```
